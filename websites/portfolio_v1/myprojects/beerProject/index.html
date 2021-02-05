@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/search-page.css" />
+    <title>Search Page</title>
+  </head>
+  <body>
+    <section class="container">
+      <nav class="menu-container">
+        <ul class="menu">
+          <li><a class="link" href="beer-random.html">Random beer</a></li>
+          <li><a class="link" href="#">Beer search</a></li>
+          <li><a class="link" href="#">Beer info</a></li>
+        </ul>
+      </nav>
+
+      <section class="content-container">
+        <form action="#" class="form">
+          <section class="search-container">
+            <h3>
+              Fill in search method or methods that you want to use then click
+              the search button.
+            </h3>
+            <input type="submit" value="" class="search" />
+          </section>
+
+          <label for="">Name</label>
+          <input
+            name="input"
+            type="text"
+            class="input name"
+            placeholder="Name"
+          />
+
+          <label for="">Hops</label>
+          <input
+            name="input"
+            type="text"
+            class="input hops"
+            placeholder="Hops"
+          />
+
+          <label for="">Malt</label>
+          <input
+            name="input"
+            type="text"
+            class="input malt"
+            placeholder="Malt"
+          />
+
+          <label for="">Brewed Before</label>
+          <input
+            name="input"
+            type="text"
+            class="input bb"
+            placeholder="MM-YYYY"
+          />
+
+          <label for="">Brewed After</label>
+          <input
+            name="input"
+            type="text"
+            class="input ba"
+            placeholder="MM-YYYY"
+          />
+
+          <label for="">ABV lesser than</label>
+          <input
+            name="input"
+            type="number"
+            class="input al"
+            placeholder="Number"
+          />
+
+          <label for="">ABV greater than</label>
+          <input
+            name="input"
+            type="number"
+            class="input ag"
+            placeholder="Number"
+          />
+        </form>
+
+        <section class="ul-container">
+          <button class="close"></button>
+          <section class="inner-container">
+            <ul class="list"></ul>
+            <p class="char-footer">
+              <span class="char-arrow left">◁&nbsp;</span
+              ><span class="counter">1</span>/<span class="pages">1</span
+              ><span class="char-arrow right">&nbsp;▷</span>
+            </p>
+          </section>
+        </section>
+      </section>
+    </section>
+    <script src="javascript/newSearchPage.js"></script>
+  </body>
+</html>

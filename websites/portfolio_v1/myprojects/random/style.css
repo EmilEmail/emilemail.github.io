@@ -1,0 +1,29 @@
+:root {
+    --blue: rgb(61, 61, 255);
+}
+
+h1 {
+    background-color: var(--blue);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#profile-pic {
+    border: 3px solid var(--blue);
+    border-radius: 50%;
+}
+
+th {
+    text-align: left;
+}
+td {
+    color: rgb(53, 53, 53);
+}
+td::first-letter {
+    text-transform: capitalize;
+}
+
+ul {
+    list-style: none;
+    padding: 3px;
+}

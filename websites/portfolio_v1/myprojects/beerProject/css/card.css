@@ -1,0 +1,162 @@
+body {
+  background: #e2e9f4;
+}
+
+/**************************************
+************** N A V  m e n u *********
+**************************************/
+
+.container {
+  display: flex;
+}
+
+.menu-container {
+  margin-top: 5%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 1px;
+  margin-left: -75px;
+  list-style: none;
+  margin-bottom: 2.5em;
+}
+
+.link {
+  color: #707880;
+  float: left;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-bottom: 0.25em;
+  margin: 0 3em 0 3em;
+  margin-bottom: 1px;
+}
+
+.link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease, left 0.5s ease;
+}
+
+.link:hover:after {
+  width: 100%;
+  left: 0;
+  background: #707880;
+}
+
+.link:visited {
+  color: #707880;
+}
+
+/********************************
+**** R a n d o m  B U T T O N ***
+********************************/
+
+.random-button {
+  background: #c8d8e7;
+  width: 20%;
+  border-color: white;
+  border-radius: 5px;
+  border-style: outset;
+  padding: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #50565c;
+  outline: none;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.random-button:hover {
+  cursor: pointer;
+}
+
+.random-button:active {
+  border-style: inset;
+}
+
+.second-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*********************************
+************* C A R D ************
+*********************************/
+
+:root {
+  --lightGrey: #c8d8e7;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto 300px;
+  grid-template-rows: 100px 100px 100px auto;
+  width: 500px;
+  border: solid #ccc;
+  border-radius: 10px;
+  border-style: outset;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  background-color: white;
+}
+
+.card img {
+  height: 80%;
+  grid-column: 1;
+  grid-row: 1 / span3;
+  margin: auto;
+}
+
+.card h3 {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: var(--lightGrey);
+  margin: 0;
+  padding-top: 10px;
+  text-align: center;
+  color: #50565c;
+  font-family: "Anton", sans-serif;
+  font-size: 1.5rem;
+}
+
+.card .p1 {
+  grid-column: 2;
+  grid-row: 2 / span2;
+  background-color: var(--lightGrey);
+  margin: 0;
+  padding: 0 10px;
+  color: #50565c;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: "Times New Roman", Times, serif;
+}
+.card .p2 {
+  grid-column: 2;
+  grid-row: 4;
+  text-align: center;
+  background-color: var(--lightGrey);
+  color: #000;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.card .p2:hover {
+  cursor: pointer;
+}

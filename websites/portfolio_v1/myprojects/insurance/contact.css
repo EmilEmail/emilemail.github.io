@@ -1,0 +1,322 @@
+/*************************************
+                Page Rules
+*************************************/
+@font-face {
+    font-family: lira sans;
+    src: url(fonts/FiraSans-Regular.ttf);
+}
+@font-face {
+    font-family: frank ruhl;
+    src: url(fonts/FrankRuhlLibre-Bold.ttf);
+}
+
+* {
+    margin: 0;
+}
+body {
+    font-family: lira sans, sans-serif;
+}
+.wrapper {
+    max-width: 960px;
+    margin: auto;
+}
+.flexcenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blockpadding {
+    padding-top: 10%;
+}
+.topmargin {
+    padding-top: 20px;
+}
+h2 {
+    display: block;
+    width: 100%;
+    color: white;
+    font-family: frank ruhl, serif;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    text-align: center;
+}
+li a, li p, label, address {
+    font-size: 12px;
+    line-height: 24px;
+}
+.button-design {
+    background-color: white;
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 2px rgb(80, 80 ,80);
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+}
+.color-1 {
+    background-color: rgb(199, 221, 234);
+}
+.color-2 {
+    background-color: rgb(241, 121, 73);
+}
+.color-3 {
+    background-color: rgb(250, 177, 49);
+}
+.color-4 {
+    background-color: rgb(169, 161, 158);
+}
+.color-5 {
+    background-color: rgb(235, 235, 235);
+}
+
+
+
+/*******************************************
+                Heading
+*******************************************/
+
+.top {
+    background-color: rgb(199, 221, 234);
+    padding-top: 40px;
+}
+.toppicture {
+    max-height: 20%;
+    max-width: 20%;
+}
+.index-top a {
+    color: white;
+    text-decoration: none;
+    font-family: frank ruhl, serif;
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+.header-right-down-con p, .header-right-up-con p {
+    font-size: 12px;
+}
+.heading-index {
+    color: black;
+    text-align: left;
+}
+.headingtext {
+    color: black;
+}
+.navbar {
+    display: none;
+}
+
+.header-left-con {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+}
+.img-container {
+    max-width: 300px;
+    justify-self: end;
+}
+.img-family {
+    max-width: 100%;
+}
+.header-right-up-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+}
+.header-right-down-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+}
+.main-cards {
+    
+}
+
+
+.card-content {
+    display: grid;
+    grid-template-rows: 40px 200px;
+    grid-template-columns: 100%;
+    padding: 40px;
+}
+.card-img {
+    display: flex;
+    grid-row: 1 / 3;
+    max-height: 200px;
+    overflow: hidden;
+    justify-content: center;
+    border-radius: 20px;
+}
+.card-img-size {
+    height: 250px;
+}
+.card-text {
+    grid-row: 2;
+    text-align: center;
+    background-color: white;
+}
+
+
+/*******************************************
+                Main
+*******************************************/
+.main {
+
+}
+.main-up {
+
+}
+.main-down {
+
+}
+.formcontainer {
+    padding-bottom: 8%;
+}
+.contactform {
+    display: grid;
+    color: white;
+    width: 200px;
+}
+input {
+    height: 35px;
+}
+textarea {
+    height: 150px;
+    resize: none;
+    padding: 10px;
+}
+input, textarea {
+    margin-bottom: 5%;
+    border: none;
+    border-radius: 2px;
+    font-family: lira sans, sans-serif;
+    font-size: 12px;
+
+}
+.submitbtn {
+    justify-self: center;
+}
+.mapcontainer {
+    background-color: rgb(80, 80 ,80);
+    background-image: url(img/map.jpg);
+    padding: 0;
+}
+.card {
+    background-color: #fab131;
+    padding: 20px;
+    margin: 15%;
+}
+address {
+    color: white;
+    font-style: normal;
+}
+.bottom {
+    background-color: rgb(119, 117, 116);
+    height: 100px;
+}
+
+
+/****************************************
+                Media query
+****************************************/
+@media only screen and (min-width: 769px){
+
+    /*************************************
+                Page Rules
+    *************************************/
+
+    .flexcenter {
+        flex-direction: row;
+    }
+
+    /************************************
+            Heading desktop
+    *********************************/
+    .heading {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 360px;
+        overflow: hidden;
+    }
+    .headingtext {
+        grid-column: 2;
+    }
+    .toppicture {
+        align-self: flex-start;
+        grid-row: 1;
+        grid-column: 3;
+        max-height: 150%;
+        max-width: 150%;  
+    }
+    .navbar {
+        display: flex;
+        background-color: white;
+        height: 68px;
+        white-space: nowrap;
+    }
+    
+    .navigations {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20%;
+    }
+    
+    .navigations li {
+        display: inline-flex;
+        list-style: none;
+    }
+
+    .activepage {
+        color: black;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(169, 161, 158);
+    }
+    a:hover {
+        color: black;
+    }
+
+    /************************************
+            Main Desktop
+    *************************************/
+    .formcontainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contactform {
+        width: 300px;
+    }
+    .submitbtn {
+        justify-self: right;
+    }
+
+    .header-container {
+        align-self: flex-start;
+        padding: 0px 60px;
+    }
+    .header-container > h2 {
+        text-align: left;
+    }
+
+    /**********************************
+            map section
+    ********************************/
+    .mapcontainer {
+        
+    }
+    .card {
+        margin: 3% 0% 17% 8%;
+        padding-bottom: 70px;
+    }
+
+
+}

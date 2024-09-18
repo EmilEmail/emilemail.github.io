@@ -2,19 +2,18 @@ import { useState, useEffect } from 'react';
 import { AppWrapper } from './styled-components/AppWrapper';
 import { PopUpImg } from './styled-components/Img';
 import SiteLock from './components/SiteLock';
-import StarAnimation from './components/StarAnimation';
-import InfoButton from './components/InfoButton';
 import InfoBox from './components/InfoBox';
 import { Heading1 } from './styled-components/Heading1';
 import { about } from './info/about';
 import { ibinder } from './info/ibinder';
 import { zunnyPeople } from './info/zunnyPeople';
 import { handelsbanken } from './info/handelsbanken';
+import ButtonAnimation from './components/ButtonAnimation';
 
 function App() {
   const [modal, setModal] = useState(null);
 
-  const [isLocked, setisLocked] = useState(true);
+  const [isLocked, setisLocked] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
 
   const [firstObject, setFirstObjUp] = useState(false);
@@ -74,8 +73,35 @@ function App() {
         {!isLocked && <Heading1>Emil Edberg</Heading1>}
         {isLocked && <PopUpImg src="/logo512.svg" alt="logo" />}
         {isLocked && <SiteLock setIsLocked={setisLocked} />}
-        {/* <<< START >>> */}
-        {startAnimation && firstObjectPosition && (
+
+        <ButtonAnimation
+          {...{
+            position: firstObjectPosition,
+            setModal,
+            startAnimation,
+            text: 'About me',
+            objectStart: firstObject,
+            obj: about,
+            delay: 1,
+          }}
+        />
+        <ButtonAnimation
+          {...{
+            position: secondObjectPosition,
+            setModal,
+            startAnimation,
+            objectStart: secondObjectStart,
+            text: (
+              <img
+                src={zunnyPeople.imgSrc}
+                alt={zunnyPeople.imgAlt}
+              />
+            ),
+            obj: zunnyPeople,
+          }}
+        />
+
+        {/* {startAnimation && firstObjectPosition && (
           <StarAnimation
             widthHeight={50}
             centeredPosition={firstObjectPosition}
@@ -88,8 +114,7 @@ function App() {
             handleClick={() => setModal(about)}
           />
         )}
-        {/* <<< END >>> */}
-        {/* <<< START >>> */}
+
         {startAnimation && secondObjectPosition && (
           <StarAnimation
             widthHeight={50}
@@ -110,8 +135,7 @@ function App() {
             handleClick={() => setModal(zunnyPeople)}
           />
         )}
-        {/* <<< END >>> */}
-        {/* <<< START >>> */}
+
         {startAnimation && thirdObjectPosition && (
           <StarAnimation
             widthHeight={50}
@@ -132,8 +156,7 @@ function App() {
             handleClick={() => setModal(handelsbanken)}
           />
         )}
-        {/* <<< END >>> */}
-        {/* <<< START >>> */}
+
         {startAnimation && forthObjectPosition && (
           <StarAnimation
             widthHeight={50}
@@ -153,8 +176,7 @@ function App() {
             }
             handleClick={() => setModal(ibinder)}
           />
-        )}
-        {/* <<< END >>> */}
+        )} */}
 
         {modal && (
           <InfoBox info={modal} handleClick={() => setModal(null)} />

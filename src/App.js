@@ -156,6 +156,22 @@ function App() {
         {modal && (
           <InfoBox info={modal} handleClick={() => setModal(null)} />
         )}
+        {isLocked && (
+          <button
+            style={{
+              position: 'fixed',
+              top: 8,
+              right: 8,
+              border: 'none',
+              color: 'white',
+              backgroundColor: 'transparent',
+              cursor: 'pointer',
+            }}
+            onClick={() => setisLocked(false)}
+          >
+            Skip
+          </button>
+        )}
       </AppWrapper>
     </div>
   );

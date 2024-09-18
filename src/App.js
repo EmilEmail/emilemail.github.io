@@ -9,11 +9,13 @@ import { ibinder } from './info/ibinder';
 import { zunnyPeople } from './info/zunnyPeople';
 import { handelsbanken } from './info/handelsbanken';
 import ButtonAnimation from './components/ButtonAnimation';
+import StarAnimation from './components/StarAnimation';
+import InfoButton from './components/InfoButton';
 
 function App() {
   const [modal, setModal] = useState(null);
 
-  const [isLocked, setisLocked] = useState(false);
+  const [isLocked, setisLocked] = useState(true);
   const [startAnimation, setStartAnimation] = useState(false);
 
   const [firstObject, setFirstObjUp] = useState(false);
@@ -74,34 +76,7 @@ function App() {
         {isLocked && <PopUpImg src="/logo512.svg" alt="logo" />}
         {isLocked && <SiteLock setIsLocked={setisLocked} />}
 
-        <ButtonAnimation
-          {...{
-            position: firstObjectPosition,
-            setModal,
-            startAnimation,
-            text: 'About me',
-            objectStart: firstObject,
-            obj: about,
-            delay: 1,
-          }}
-        />
-        <ButtonAnimation
-          {...{
-            position: secondObjectPosition,
-            setModal,
-            startAnimation,
-            objectStart: secondObjectStart,
-            text: (
-              <img
-                src={zunnyPeople.imgSrc}
-                alt={zunnyPeople.imgAlt}
-              />
-            ),
-            obj: zunnyPeople,
-          }}
-        />
-
-        {/* {startAnimation && firstObjectPosition && (
+        {startAnimation && firstObjectPosition && (
           <StarAnimation
             widthHeight={50}
             centeredPosition={firstObjectPosition}
@@ -176,7 +151,7 @@ function App() {
             }
             handleClick={() => setModal(ibinder)}
           />
-        )} */}
+        )}
 
         {modal && (
           <InfoBox info={modal} handleClick={() => setModal(null)} />
